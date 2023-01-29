@@ -1,1 +1,2 @@
-export default NODE_ENV ="https://socialshare-server.onrender.com";
+export var NODE_ENV ="https://socialshare-server.onrender.com";
+
