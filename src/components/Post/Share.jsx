@@ -21,14 +21,14 @@ const Share = ({ post }) => {
 	const dispatch = useDispatch();
 
 	const copyURL = () => {
-		window.navigator.clipboard.writeText(`https://socialshare-i5iz.onrender.com/post/${post._id}`);
+		window.navigator.clipboard.writeText(`https://socialshare-server.onrender.com/post/${post._id}`);
 		dispatch(showModal({ msg: "URL copied to clipboard" }));
 	};
 
 	const copyEmbed = () => {
 		window.navigator.clipboard.writeText(
 			`<iframe
-				src="https://socialshare-i5iz.onrender.com/post/${post._id}?embed=true"
+				src="https://socialshare-server.onrender.com/post/${post._id}?embed=true"
 				width="500"
 				height="700"
 				title="social-media-app"
@@ -38,14 +38,14 @@ const Share = ({ post }) => {
 	};
 
 	const shareToUrls = {
-		twitter: `https://twitter.com/intent/tweet?text=${post.caption}&url=https://socialshare-i5iz.onrender.com/post/${post._id}`,
+		twitter: `https://twitter.com/intent/tweet?text=${post.caption}&url=https://socialshare-server.onrender.com/post/${post._id}`,
 		facebook: `https://www.facebook.com/dialog/share?
 		app_id=287203076842060
 		&display=popup
-		&href=https://socialshare-i5iz.onrender.com/post/${post._id}
-		&redirect_uri=https://socialshare-i5iz.onrender.com/post/${post._id}`,
-		linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=https://socialshare-i5iz.onrender.com/post/${post._id}`,
-		whatsapp: `https://api.whatsapp.com/send/?text=${post.caption} Link: https://socialshare-i5iz.onrender.com/post/${post._id}`,
+		&href=https://socialshare-server.onrender.com/post/${post._id}
+		&redirect_uri=https://socialshare-server.onrender.com/post/${post._id}`,
+		linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=https://socialshare-server.onrender.com/post/${post._id}`,
+		whatsapp: `https://api.whatsapp.com/send/?text=${post.caption} Link: https://socialshare-server.onrender.com/post/${post._id}`,
 	};
 
 	const shareTo = dest => {
