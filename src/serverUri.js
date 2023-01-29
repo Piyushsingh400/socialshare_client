@@ -1,1 +1,1 @@
-export default process.env.NODE_ENV ="https://socialshare-server.onrender.com";
+export default NODE_ENV ="https://socialshare-server.onrender.com";
