@@ -1,2 +1,3 @@
-export default SERVER_URI ="https://socialshare-server.onrender.com";
-
+export default process.env.NODE_ENV === "development"
+	? "http://localhost:5000"
+	: "https://socialshare-server.onrender.com";
